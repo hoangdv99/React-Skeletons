@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ArticleSkeleton from '../skeletons/ArticleSkeleton';
+import Shimmer from '../skeletons/Shimmer';
 
 export default function Articles() {
     const [articles, setArticles] = useState(null);
@@ -23,6 +24,7 @@ export default function Articles() {
             { !articles && [1, 2, 3, 4, 5].map(key => (
                 <ArticleSkeleton key={ key } />
             )) }
+            <Shimmer />
         </div>
     )
 }
